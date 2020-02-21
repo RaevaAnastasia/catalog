@@ -1,5 +1,7 @@
 import React from 'react';
 import './App.css';
+import Header from './components/Header/Header';
+
 
 const products = [
   {id: 1, name: 'Голубика', price: 150, url: './images/product-1.jpg'},
@@ -30,7 +32,7 @@ const products = [
 ];
 
 function App() {
-  return ("hello");
+  return (<Header />);
 }
 
 export default App;

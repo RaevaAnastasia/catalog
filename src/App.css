@@ -1,1 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
+
+.container {
+    width: 120rem;
+    margin: 0 auto;
+}
+
+
