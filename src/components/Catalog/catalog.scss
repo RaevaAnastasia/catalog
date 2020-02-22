@@ -1,0 +1,12 @@
+.catalog {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-top: 4rem;
+
+    &__item {
+        width: 30%;
+        margin-bottom: 4rem;
+    }
+}
