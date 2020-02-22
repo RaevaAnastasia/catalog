@@ -6,7 +6,7 @@ function Cart() {
 
     return (
         <div className="cart">
-            <img className="cart__img" src="../../../../images/cart.svg" alt="Корзина" />
+            <img className="cart__img" src={require('../../images/cart.svg')} alt="Корзина" />
             <span className="cart__counter">{cartSum}</span>
         </div>
     );

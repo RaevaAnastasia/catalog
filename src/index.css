@@ -13,3 +13,13 @@ code {
 html {
   font-size: 62.5%;
 }
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  width: 100%;
+  object-fit: cover;
+}
