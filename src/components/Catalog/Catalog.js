@@ -7,13 +7,14 @@ function Catalog(props) {
 
     let catalogList = catalog.map((elem) => {
         return (
-            <li className="catalog__item product" key="elem.id">
+            <li className="catalog__item product" key={elem.id}>
                 <Product name={elem.name} 
                         price={elem.price} 
                         img={elem.img}
                         decreaseCounter={props.decrease}
                         increaseCounter={props.increase}
                         counter={props.counter}
+                        id = {elem.id}
                         />
             </li>
         );

@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import './product.scss';
 
 function Product(props) {
-    let [status, setStatus] = useState(false);
+    let initialStatus = localStorage.getItem('status' + props.id) || false;
+    let [status, setStatus] = useState(initialStatus);
 
     function increaseCounter() {
         props.increaseCounter(props.counter);
@@ -15,6 +16,7 @@ function Product(props) {
     function changeStatus() {
         status ? decreaseCounter() : increaseCounter();
         setStatus(!status);
+        localStorage.setItem('status' + props.id, !status);
     }
 
     return (

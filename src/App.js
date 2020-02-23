@@ -33,14 +33,17 @@ const products = [
 ];
 
 function App() {
-  let [counter, setCounter] = useState(0);
+  let initialCounter = localStorage.getItem('counter') || 0;
+  let [counter, setCounter] = useState(initialCounter);
 
   function increaseCounter(counter) {
-    setCounter(counter + 1);
+    setCounter(++counter);
+    localStorage.setItem('counter', counter);
   }
 
   function decreaseCounter(counter) {
-    setCounter(counter - 1);
+    setCounter(--counter);
+    localStorage.setItem('counter', counter);
   }
 
   return (
