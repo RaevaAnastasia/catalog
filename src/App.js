@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './App.css';
 import Header from './components/Header/Header';
 import Catalog from './components/Catalog/Catalog';
@@ -33,10 +33,20 @@ const products = [
 ];
 
 function App() {
+  let [counter, setCounter] = useState(0);
+
+  function increaseCounter(counter) {
+    setCounter(counter + 1);
+  }
+
+  function decreaseCounter(counter) {
+    setCounter(counter - 1);
+  }
+
   return (
     <>
-      <Header />
-      <Catalog catalog={products} />
+      <Header counter={counter} />
+      <Catalog catalog={products} decrease={decreaseCounter} increase={increaseCounter} counter={counter}/>
   </>
   );
 }

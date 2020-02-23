@@ -1,13 +1,12 @@
 import React, {useState} from 'react';
 import './cart.scss';
 
-function Cart() {
-    let [cartSum, setCartSum ] = useState(0);
+function Cart(props) {
 
     return (
         <div className="cart">
             <img className="cart__img" src={require('../../images/cart.svg')} alt="Корзина" />
-            <span className="cart__counter">{cartSum}</span>
+            <span className="cart__counter">{props.counter}</span>
         </div>
     );
 }
