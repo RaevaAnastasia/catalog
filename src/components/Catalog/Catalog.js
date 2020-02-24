@@ -9,13 +9,13 @@ function Catalog(props) {
         return (
             <li className="catalog__item product" key={elem.id}>
                 <Product name={elem.name} 
-                        price={elem.price} 
-                        img={elem.img}
-                        decreaseCounter={props.decrease}
-                        increaseCounter={props.increase}
-                        counter={props.counter}
-                        id = {elem.id}
-                        />
+                    price={elem.price} 
+                    img={elem.img}
+                    decreaseCounter={props.decrease}
+                    increaseCounter={props.increase}
+                    counter={props.counter}
+                    id = {elem.id}
+                />
             </li>
         );
     });

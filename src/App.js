@@ -46,6 +46,12 @@ function App() {
     localStorage.setItem('counter', counter);
   }
 
+  window.addEventListener('storage', updateData);
+
+  function updateData() {
+    document.location.reload(true);
+  }
+
   return (
     <>
       <Header counter={counter} />

@@ -8,22 +8,16 @@ function Product(props) {
     function increaseCounter() {
         props.increaseCounter(props.counter);
         localStorage.setItem('status' + props.id, true);
-      }
+    }
     
-      function decreaseCounter() {
+    function decreaseCounter() {
         props.decreaseCounter(props.counter);
         localStorage.removeItem('status' + props.id);
-      }
+    }
 
     function changeStatus() {
         status ? decreaseCounter() : increaseCounter();
         setStatus(!status);
-    }
-
-    window.addEventListener('storage', updateData);
-
-    function updateData() {
-        document.location.reload(true);
     }
 
     return (
